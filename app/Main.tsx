@@ -10,7 +10,6 @@ import NewsletterForm from 'pliny/ui/NewsletterForm'
 import CoverImage from '../components/CoverImage' // CoverImage 컴포넌트 임포트
 import { Blog } from '.contentlayer/generated' // CoreContent 타입 임포트
 import { CoreContent } from '../types' // 새로 만든 타입 정의 파일에서 CoreContent 타입 임포트
-import AudioPlayer from '@/components/AudioPlayer'
 
 const MAX_DISPLAY = 5
 
@@ -47,8 +46,8 @@ export default function Home({ posts }: HomeProps) {
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            최근 글
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-blue-500 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            우리의 기록
           </h1>
           <p className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
             {currentTime}
@@ -66,7 +65,7 @@ export default function Home({ posts }: HomeProps) {
                 return (
                   <article
                     key={slug}
-                    className="relative transform overflow-hidden rounded-lg border border-gray-200 bg-gray-50 p-4 shadow-md transition-all duration-300 ease-in-out hover:-rotate-2 hover:scale-105 dark:border-gray-700 dark:bg-gray-800"
+                    className="relative transform overflow-hidden rounded-lg border border-gray-200 bg-gray-50 p-4 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-2 dark:border-gray-700 dark:bg-gray-800"
                   >
                     {images && images.length > 0 && (
                       <CoverImage title={title} images={images} /> // CoverImage 컴포넌트 추가

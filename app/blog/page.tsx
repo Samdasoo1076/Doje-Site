@@ -21,7 +21,7 @@ export default function BlogPage() {
 
   return (
     <>
-      <div>태그 검색하기</div>
+      <div>도제 히스토리</div>
       <ListLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
